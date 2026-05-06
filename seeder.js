@@ -33,21 +33,21 @@ const importData = async () => {
         });
         await SuperAdmin.create({
             name: 'System Admin',
-            email: 'admin@shnoor.com',
+            email: 'admin@hrm.com',
             password: 'Admin@1234', 
             role: 'Super Admin'
         });
 
         await SuperAdmin.create({
-            name: 'Shnoor Manager',
-            email: 'manager@shnoor.com',
+            name: 'HRM Manager',
+            email: 'manager@hrm.com',
             password: 'Manager@1234',
             role: 'Manager'
         });
 
         console.log('Seeding employees...');
         await Employee.create({
-            employee_name: 'Shnoor Employee',
+            employee_name: 'HRM Employee',
             email: 'hrm.employee123@gmail.com',
             password: 'password123',
             role: 'Employee',
@@ -59,7 +59,7 @@ const importData = async () => {
 
         await Employee.create({
             employee_name: 'Moksha',
-            email: 'moksha@shnoor.com',
+            email: 'moksha@hrm.com',
             password: 'Moksha@1234',
             role: 'Employee',
             department: 'Human Resources',
@@ -70,8 +70,8 @@ const importData = async () => {
 
         await Employee.create({
             employee_name: 'Ram',
-            email: 'ram@shnoor.com',
-            password: 'Ram@shnoor.com',
+            email: 'ram@hrm.com',
+            password: 'Ram@hrm.com',
             role: 'Employee',
             department: 'Human Resources',
             department_id: hrDep.department_id,
@@ -81,7 +81,7 @@ const importData = async () => {
 
         await HeaderSetting.destroy({ where: {} });
         await HeaderSetting.create({
-            title: 'Shnoor International LLC',
+            title: 'HRM Solutions LLC',
             subtitle: 'Empowering Next-Gen Workforce',
             description: 'Advanced Human Resource Management designed for the modern enterprise.',
             buttonText: 'Get Started',
@@ -92,7 +92,7 @@ const importData = async () => {
         await AboutSetting.destroy({ where: {} });
         await AboutSetting.create({
             title: 'Leading the Future of HR',
-            description: 'Shnoor International provides a cutting-edge HR portal that simplifies workforce management for modern enterprises. We bridge the gap between people and productivity.',
+            description: 'HRM provides a cutting-edge HR portal that simplifies workforce management for modern enterprises. We bridge the gap between people and productivity.',
             mission: 'To empower organizations with an intuitive platform that streamlines core HR processes, fostering an engaging work environment.',
             vision: 'To emerge as the leading provider of HR technology solutions, consistently setting new standards for ease-of-use and reliability.'
         });
@@ -100,7 +100,7 @@ const importData = async () => {
         await ContactSetting.destroy({ where: {} });
         await ContactSetting.create({
             address: '123 Business Avenue, Suite 100\nNew York, NY 10001',
-            email: 'contact@shnoor.com',
+            email: 'contact@hrm.com',
             phone: '+1 (555) 123-4567',
             facebook: '#',
             twitter: '#',
@@ -128,8 +128,8 @@ const importData = async () => {
         await Company.destroy({ where: {} });
         await Company.bulkCreate([
             {
-                name: 'Shnoor Tech Solutions',
-                email: 'contact@shnoortech.com',
+                name: 'HRM Tech Solutions',
+                email: 'contact@hrmtech.com',
                 location: 'Dubai, UAE',
                 status: 'Active'
             },

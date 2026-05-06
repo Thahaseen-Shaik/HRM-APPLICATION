@@ -33,7 +33,7 @@ const ManagerRegistration = () => {
       <div style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 20px' }}>
         <div className="login-card-modern">
           <div style={{ textAlign: 'center', marginBottom: 32 }}>
-            <span className="auth-brand">shnoor</span>
+            <span className="auth-brand">HRM</span>
           </div>
           
           <h2 className="auth-heading">Manager Registration</h2>

@@ -15,8 +15,8 @@ const Footer = ({ socialLinks = [], contact = {} }) => {
       <div className="footer-inner">
         <div className="footer-brand">
           <div className="logo" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <img src={logoUrl || '/logo.avif'} alt="shnoor logo" style={{ height: 32, width: 32, objectFit: 'contain', borderRadius: 6, marginRight: 8 }} />
-            <span style={{ fontWeight: 700, fontSize: '1.3rem', letterSpacing: 1 }}>shnoor</span>
+            <img src={logoUrl || '/logo.avif'} alt="HRM logo" style={{ height: 32, width: 32, objectFit: 'contain', borderRadius: 6, marginRight: 8 }} />
+            <span style={{ fontWeight: 700, fontSize: '1.3rem', letterSpacing: 1 }}>HRM</span>
           </div>
           <div className="footer-text">Empowering Next-Gen Workforce</div>
           {socialLinks.length > 0 && (
@@ -92,7 +92,7 @@ const Footer = ({ socialLinks = [], contact = {} }) => {
 
       <div className="footer-bar">
         <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>
-          &copy; {new Date().getFullYear()} Shnoor International LLC. All rights reserved.
+          &copy; {new Date().getFullYear()} HRM Solutions LLC. All rights reserved.
         </div>
       </div>
     </footer>

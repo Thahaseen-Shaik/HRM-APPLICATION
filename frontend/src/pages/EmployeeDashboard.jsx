@@ -26,7 +26,7 @@ import { getProfile } from '../services/employeeService';
 const EmployeeDashboard = () => {
   const navigate = useNavigate();
   const [activeView, setActiveView] = useState('dashboard');
-  const [email, setEmail] = useState('emp@shnoor.com');
+  const [email, setEmail] = useState('emp@hrm.com');
   const [profile, setProfile] = useState(null);
 
   const handleProfileUpdated = (nextProfile) => {
@@ -110,7 +110,7 @@ const EmployeeDashboard = () => {
       return;
     }
 
-    setEmail(sessionStorage.getItem('shnoor_email') || localStorage.getItem('shnoor_email') || 'emp@shnoor.com');
+    setEmail(sessionStorage.getItem('shnoor_email') || localStorage.getItem('shnoor_email') || 'emp@hrm.com');
 
     const loadProfile = async () => {
       try {

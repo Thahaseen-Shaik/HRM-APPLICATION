@@ -113,7 +113,7 @@ const ManagerDashboard = () => {
   const navigate = useNavigate();
   const [activeView, setActiveView] = useState('dashboard');
   const [portalMode, setPortalMode] = useState('manager');
-  const [email, setEmail] = useState('manager@shnoor.com');
+  const [email, setEmail] = useState('manager@hrm.com');
   const [userData, setUserData] = useState(null);
   const [profile, setProfile] = useState(null);
 

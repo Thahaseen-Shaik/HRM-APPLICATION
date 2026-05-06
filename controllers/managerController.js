@@ -1382,7 +1382,7 @@ exports.sendLetter = async (req, res) => {
                        !role.includes('admin') && 
                        !desig.includes('manager') && 
                        !desig.includes('admin') && 
-                       name !== 'shnoor manager' &&
+                       name !== 'hrm manager' &&
                        e.email !== req.user.email; // Don't send to self
             }).map(e => e.employee_id);
         } else {

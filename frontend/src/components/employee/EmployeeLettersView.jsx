@@ -100,9 +100,9 @@ const EmployeeLettersView = () => {
       <div class="content">${content.replace(/^(<p>)?\s*Dear\s+.*?<\/p>[\r\n\s]*/i, '')}</div>
       <div class="signature-block">
         <strong>Thanks & Regards</strong><br/>
-        <strong>Hiring Team - SHNOOR International LLC</strong><br/>
+        <strong>Hiring Team - HRM Solutions LLC</strong><br/>
         Mount Tabor Road, Odessa, Missouri, United States | Ph: +91-9429694298<br/>
-        www.shnoor.com<br/>
+        www.hrm.com<br/>
         <img src="https://${window.location.host}/Signature.png" class="signature-img" />
       </div>
     </body>
@@ -223,9 +223,9 @@ const EmployeeLettersView = () => {
               />
               <div style={{ marginTop: '60px' }}>
                 <strong>Thanks & Regards</strong><br/>
-                <strong>Hiring Team - SHNOOR International LLC</strong><br/>
+                <strong>Hiring Team - HRM Solutions LLC</strong><br/>
                 Mount Tabor Road, Odessa, Missouri, United States | Ph: +91-9429694298<br/>
-                www.shnoor.com<br/><br/>
+                www.hrm.com<br/><br/>
                 <div style={{ textAlign: 'left', marginTop: '20px' }}>
                   <img src="/Signature.png" alt="Signature" style={{ maxHeight: '100px' }} onError={(e) => e.target.style.display = 'none'} />
                 </div>

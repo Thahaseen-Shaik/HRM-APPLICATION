@@ -10,6 +10,7 @@ import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsAndConditionsPage from './pages/TermsAndConditionsPage';
 import AdminRegistration from './pages/AdminRegistration';
 import ManagerRegistration from './pages/ManagerRegistration';
+import EmployeeRegistration from './pages/EmployeeRegistration';
 import './index.css';
 import GlobalNotificationListener from './components/common/GlobalNotificationListener.jsx';
 
@@ -67,6 +68,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/register/admin" element={<AdminRegistration />} />
         <Route path="/register/manager" element={<ManagerRegistration />} />
+        <Route path="/register/employee" element={<EmployeeRegistration />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route
           path="/admin"

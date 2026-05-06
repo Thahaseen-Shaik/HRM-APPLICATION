@@ -444,7 +444,7 @@ exports.downloadPayslip = async (req, res) => {
             <div class="payslip-box">
                 <div class="header">
                     <h2>OFFICIAL PAYSLIP</h2>
-                    <p>SHNOOR HRM PORTAL</p>
+                    <p>HRM PORTAL</p>
                 </div>
                 <div class="grid">
                     <div>

@@ -48,7 +48,7 @@ const DashboardLayout = ({
   return (
     <div className="app-root">
       <Sidebar
-        brand="shnoor"
+        brand="HRM"
         tag={roleLabel}
         profile={profile}
         navItems={navItems}

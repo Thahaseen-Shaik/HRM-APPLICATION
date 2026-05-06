@@ -18,7 +18,7 @@ import { getMe } from '../services/authService';
 const AdminDashboard = () => {
   const navigate = useNavigate();
   const [activeView, setActiveView] = useState('dashboard');
-  const [email, setEmail] = useState('admin@shnoor.com');
+  const [email, setEmail] = useState('admin@hrm.com');
   const [profile, setProfile] = useState(null);
 
   const handleProfileUpdated = (nextProfile) => {
@@ -74,7 +74,7 @@ const AdminDashboard = () => {
         sessionStorage.getItem('shnoor_admin_email') ||
         localStorage.getItem('shnoor_email') ||
         localStorage.getItem('shnoor_admin_email') ||
-        'admin@shnoor.com'
+        'admin@hrm.com'
     );
 
     const loadProfile = async () => {

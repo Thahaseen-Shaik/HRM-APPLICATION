@@ -104,7 +104,7 @@ const GlobalNotificationListener = () => {
 
       // BROWSER DESKTOP NOTIFICATION
       if (Notification.permission === 'granted') {
-        new Notification("Shnoor HRM", {
+        new Notification("HRM Portal", {
           body: message,
           icon: data.logo || '/logo.avif' // ✅ Use company logo
         });

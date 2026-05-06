@@ -29,7 +29,7 @@ export const registerNotificationServiceWorker = async () => {
   }
 };
 
-export const showDesktopNotification = async (message, title = 'Shnoor HRM') => {
+export const showDesktopNotification = async (message, title = 'HRM Portal') => {
   if (!('Notification' in window)) return null;
 
   const permission = getDesktopNotificationPermission();
@@ -42,7 +42,7 @@ export const showDesktopNotification = async (message, title = 'Shnoor HRM') => 
         body: String(message || ''),
         icon: NOTIFICATION_ICON,
         badge: NOTIFICATION_ICON,
-        tag: `shnoor-${title}`,
+        tag: `hrm-${title}`,
         renotify: true,
         requireInteraction: false,
         silent: false,
@@ -54,7 +54,7 @@ export const showDesktopNotification = async (message, title = 'Shnoor HRM') => 
       body: String(message || ''),
       icon: NOTIFICATION_ICON,
       badge: NOTIFICATION_ICON,
-      tag: `shnoor-${title}`,
+      tag: `hrm-${title}`,
       renotify: true,
       requireInteraction: false,
       silent: false,

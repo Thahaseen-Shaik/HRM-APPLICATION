@@ -15,9 +15,9 @@ const Header = () => {
     <>
       <header className="navbar">
         <div className="nav-container">
-          <Link to="/" className="logo" aria-label="Shnoor Home" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <img src={logoUrl || '/logo.avif'} alt="shnoor logo" style={{ height: '48px' }} />
-            shnoor
+          <Link to="/" className="logo" aria-label="HRM Home" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <img src={logoUrl || '/logo.avif'} alt="HRM logo" style={{ height: '48px' }} />
+            HRM
           </Link>
 
           <button

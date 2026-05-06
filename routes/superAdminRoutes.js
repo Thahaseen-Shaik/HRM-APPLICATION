@@ -1,5 +1,5 @@
 const express = require('express');
-const { login, register, registerPublic, getUsers, deleteUser, getMe, updateDetails, updatePassword, forgotPassword, resetPassword, getTrialManagers, updateTrial } = require('../controllers/superAdminController');
+const { login, register, registerPublic, registerEmployee, getUsers, deleteUser, getMe, updateDetails, updatePassword, forgotPassword, resetPassword, getTrialManagers, updateTrial } = require('../controllers/superAdminController');
 const { protect, authorize } = require('../middleware/authMiddleware');
 const upload = require('../middleware/uploadMiddleware');
 
@@ -10,6 +10,7 @@ router.post('/forgotpassword', forgotPassword);
 router.put('/resetpassword/:resettoken', resetPassword);
 // Public self-registration endpoint
 router.post('/register/public', registerPublic);
+router.post('/register/employee', registerEmployee);
 // Protecting register so only Super Admins can add other admins
 router.post('/register', protect, authorize('Super Admin'), register);
 router.get('/users', protect, authorize('Super Admin', 'Admin'), getUsers);

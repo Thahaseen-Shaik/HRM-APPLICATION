@@ -48,18 +48,18 @@ const getCompanyContext = async () => {
         ]);
 
         let context = 'Company Information:\n';
-        context += `Name: ${header?.title || 'Shnoor International LLC'}\n`;
+        context += `Name: ${header?.title || 'HRM Solutions LLC'}\n`;
         context += `Tagline: ${header?.subtitle || 'Empowering Next-Gen Workforce'}\n`;
         context += `Description: ${about?.description || 'A cutting-edge HRM platform for modern enterprises.'}\n`;
         context += `Mission: ${about?.mission || 'To empower organizations with an intuitive platform.'}\n`;
-        context += `Contact Email: ${contact?.email || 'contact@shnoor.com'}\n`;
+        context += `Contact Email: ${contact?.email || 'contact@hrm.com'}\n`;
         context += `Contact Phone: ${contact?.phone || '+1 (555) 123-4567'}\n`;
         context += `Address: ${contact?.address || '123 Business Avenue, Suite 100, New York, NY 10001'}\n`;
         
         return context;
     } catch (err) {
         console.error('[Chat] Failed to fetch company context:', err);
-        return 'Company: Shnoor International LLC\nEmail: contact@shnoor.com\nPhone: +1 (555) 123-4567\n';
+        return 'Company: HRM Solutions LLC\nEmail: contact@hrm.com\nPhone: +1 (555) 123-4567\n';
     }
 };
 
@@ -609,7 +609,7 @@ exports.updateChatResponse = async (req, res) => {
         try {
             await sendGlobalNotification({
                 senderRole: 'admin',
-                senderEmail: req.user?.email || 'admin@shnoor.com',
+                senderEmail: req.user?.email || 'admin@hrm.com',
                 message: response,
                 type: 'admin_message',
                 recipientEmails: [chat.userId]
@@ -836,7 +836,7 @@ exports.sendAdminReply = async (req, res) => {
         try {
             const notifyResult = await sendGlobalNotification({
                 senderRole: 'admin',
-                senderEmail: req.user?.email || 'admin@shnoor.com',
+                senderEmail: req.user?.email || 'admin@hrm.com',
                 message: content,
                 type: 'admin_message',
                 recipientEmails: [session_id] // Send to specific recipient

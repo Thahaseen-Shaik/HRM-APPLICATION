@@ -234,12 +234,12 @@ exports.registerPublic = async (req, res) => {
     try {
         const { name, email, password, role } = req.body;
 
-        // Only allow Admin or Manager for public registration
-        const allowedRoles = ['Admin', 'Manager'];
+        // Only allow Admin, Manager, or Employee for public registration
+        const allowedRoles = ['Admin', 'Manager', 'Employee'];
         const normalizedRole = allowedRoles.includes(role) ? role : null;
         
         if (!normalizedRole) {
-            return res.status(400).json({ success: false, error: 'Registration is currently limited to Admin and Manager roles.' });
+            return res.status(400).json({ success: false, error: 'Registration is currently limited to Admin, Manager, and Employee roles.' });
         }
 
         const userData = {
@@ -266,6 +266,47 @@ exports.registerPublic = async (req, res) => {
         sendTokenResponse(user, 201, res);
     } catch (err) {
         res.status(400).json({ success: false, error: err.message });
+    }
+};
+
+// @desc    Public employee registration
+// @route   POST /api/v1/auth/register/employee
+exports.registerEmployee = async (req, res) => {
+    try {
+        const { name, email, password } = req.body;
+
+        if (!name || !email || !password) {
+            return res.status(400).json({ success: false, error: 'Please provide name, email, and password' });
+        }
+
+        const normalizedEmail = String(email).trim().toLowerCase();
+
+        const existingSuperAdmin = await SuperAdmin.findOne({ where: { email: normalizedEmail } });
+        const existingEmployee = await Employee.findOne({ where: { email: normalizedEmail } });
+
+        if (existingSuperAdmin || existingEmployee) {
+            return res.status(400).json({ success: false, error: 'An account with this email already exists' });
+        }
+
+        const employee = await Employee.create({
+            employee_name: String(name).trim(),
+            email: normalizedEmail,
+            password,
+            role: 'Employee',
+            status: 'Active'
+        });
+
+        return res.status(201).json({
+            success: true,
+            user: {
+                id: employee.employee_id,
+                name: employee.employee_name,
+                email: employee.email,
+                role: 'Employee'
+            }
+        });
+    } catch (err) {
+        return res.status(400).json({ success: false, error: err.message });
     }
 };
 

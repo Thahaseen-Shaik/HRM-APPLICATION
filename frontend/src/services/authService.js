@@ -25,6 +25,11 @@ export const registerPublic = async (payload) => {
   return data;
 };
 
+export const registerEmployee = async (payload) => {
+  const { data } = await api.post('/api/v1/auth/register/employee', payload);
+  return data;
+};
+
 export const registerAdmin = async (payload) => {
   const { data } = await api.post('/api/v1/auth/register', payload);
   return data;
